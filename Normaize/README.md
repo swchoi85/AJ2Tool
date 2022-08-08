@@ -35,7 +35,7 @@ make
 
 ## Processing Step
 
-Put Image in the Iros folder and then command
+Put Image in the "Iris" folder and then command
 
 | Command                        | Description                                           |
 |--------------------------------|-------------------------------------------------------|
