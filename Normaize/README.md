@@ -17,10 +17,20 @@ sudo apt install pkg-config
 
 sudo apt install libopencv-dev
 
-git clone https://github.com/swchoi85/AJ2Tool.git
 
 ---
 
+## Build Tool
+
+---
+
+git clone https://github.com/swchoi85/AJ2Tool.git
+
+cd AJ2Tool/Normaize/source
+
+make
+
+---
 
 
 ## Processing Step
@@ -29,7 +39,6 @@ Put Image in the Iros folder and then command
 
 | Command                        | Description                                           |
 |--------------------------------|-------------------------------------------------------|
-| `make`                         | Make tool                                             |
 | `./trans`                      | Make image modified files from 'Iris' -> 'Trans'      |
 | `./normal`                     | Make image modified files from 'Trans' -> 'Conv'      |
 
