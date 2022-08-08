@@ -11,11 +11,13 @@ sudo apt update
 
 sudo apt upgrade
 
-sudo apt install build-essential cmake
+sudo apt install build-essential cmake git
 
 sudo apt install pkg-config
 
 sudo apt install libopencv-dev
+
+git clone https://github.com/swchoi85/AJ2Tool.git
 
 ---
 
