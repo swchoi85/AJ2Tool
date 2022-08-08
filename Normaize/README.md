@@ -1,6 +1,6 @@
 # AJ2 Tool
 
-# Normailze Tool
+# Normalize Tool
 
 ## Pre condition
 
@@ -68,7 +68,7 @@ Checked Iris Image
 
 <img src="https://user-images.githubusercontent.com/75821638/183318961-dc93b945-5d61-4d8b-91c3-0a8ddc6ba3f1.png" width="320" height="240">
 
-Normaized Image
+Normalized Image
 
 <img src="https://user-images.githubusercontent.com/75821638/183318998-06180867-986e-4307-aa3a-076b8440dd5d.png" width="600" height="150">
 
