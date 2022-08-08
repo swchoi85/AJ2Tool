@@ -26,7 +26,7 @@ sudo apt install libopencv-dev
 
 git clone https://github.com/swchoi85/AJ2Tool.git
 
-cd AJ2Tool/Normaize/source
+cd AJ2Tool/Normalize/source
 
 make
 
