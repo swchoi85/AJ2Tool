@@ -1,12 +1,13 @@
-# AJ2 Tool
+# AJ2 Normalize Tool
 
-# Normalize Tool
+Find Iris and then normalize
 
 ## Pre condition
 
 Make environment on Ubuntu 20.4 or Later version
 
----
+```
+
 sudo apt update
 
 sudo apt upgrade
@@ -18,11 +19,11 @@ sudo apt install pkg-config
 sudo apt install libopencv-dev
 
 
----
+```
 
 ## Build Tool
 
----
+```
 
 git clone https://github.com/swchoi85/AJ2Tool.git
 
@@ -30,8 +31,7 @@ cd AJ2Tool/Normalize/source
 
 make
 
----
-
+```
 
 ## Processing Step
 
@@ -39,11 +39,15 @@ Put Image in the "Iris" folder and then command
 
 | Command                        | Description                                           |
 |--------------------------------|-------------------------------------------------------|
-| `./trans`                      | Make image modified files from 'Iris' -> 'Trans'      |
-| `./normal`                     | Make image modified files from 'Trans' -> 'Conv'      |
+| `./trans`                      | Transplate image from **Iris** to **Trans** folder    |
+| `./normal`                     | Normalize image from **Trans** to **Conv** folder     |
 
 
-### trans output
+### Transplation
+```
+./trans
+
+```
 
 Original Image
 
@@ -62,13 +66,24 @@ Gamma effect
 <img src="https://user-images.githubusercontent.com/75821638/183318888-747d0869-e2f2-46f9-a297-e7129406d9df.png" width="320" height="240">
 
 
-### Normalize Outout
+### Normalization
 
-Checked Iris Image
+```
+./normalize
+
+```
+
+Find pupil and iris
 
 <img src="https://user-images.githubusercontent.com/75821638/183318961-dc93b945-5d61-4d8b-91c3-0a8ddc6ba3f1.png" width="320" height="240">
 
 Normalized Image
 
 <img src="https://user-images.githubusercontent.com/75821638/183318998-06180867-986e-4307-aa3a-076b8440dd5d.png" width="600" height="150">
+
+
+Normalize use Opencv warpPolar API
+
+https://docs.opencv.org/4.2.0/da/d54/group__imgproc__transform.html#ga49481ab24fdaa0ffa4d3e63d14c0d5e4
+
 
