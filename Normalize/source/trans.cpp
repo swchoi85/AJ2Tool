@@ -165,8 +165,8 @@ int main(int argc,char *argv[])
             j2c.makeFile(p,"Trans","3d_0",mod);
         }
 
+        char key;
 	if ( loop == false ) { 
-            char key;
             key = waitKey(0);
             if ( key == 'q' || key ==27 ) break;
             if ( key == 'c' ) loop = true;
