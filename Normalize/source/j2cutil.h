@@ -22,8 +22,6 @@ public:
 
     Mat normalize(Mat img,Point& innerP,Point& rad);
     void makeFile(filesystem::path path,string dir,string name,Mat img);
-    int innerDetect(Mat eye, cv::Point& innerP);
-    int outterDetect(Mat eye, cv::Point innerP);
 
 private:
 };
