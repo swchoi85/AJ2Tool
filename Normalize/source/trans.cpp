@@ -75,6 +75,10 @@ int main(int argc,char *argv[])
 {
     J2CUtil j2c;
     std::string _dir("./Iris/");
+    bool loop;
+    loop = false;
+
+    if ( argc> 1 ) loop = true;
     for (auto& p : filesystem::recursive_directory_iterator(_dir)) {
 	auto  path = p.path();
 
@@ -161,12 +165,20 @@ int main(int argc,char *argv[])
             j2c.makeFile(p,"Trans","3d_0",mod);
         }
 
-	if ( argc< 2) 
-            waitKey(0);
-	else waitKey(10);
+	if ( loop == false ) { 
+            char key;
+            key = waitKey(0);
+            if ( key == 'q' || key ==27 ) break;
+            if ( key == 'c' ) loop = true;
+        }
+        else {
+            key = waitKey(1);
+            if ( key == 's' ) loop = false;
+        }
+
 
     }
-    if ( argc> 1) 
-	    waitKey(1000);
+    waitKey(1000);
+    destroyAllWindows();
     return 0;
 }

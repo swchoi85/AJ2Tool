@@ -1,4 +1,4 @@
-../trans : trans.o normalize.o
+../trans : trans.o normalize.o ./Lib/libj2cutil.a
 	g++ -o ../trans trans.o -L./Lib -lj2cutil `pkg-config --libs --cflags opencv4` -std=c++17
 	g++ -o ../normalize normalize.o -L./Lib -lj2cutil `pkg-config --libs --cflags opencv4` -std=c++17
 
@@ -10,4 +10,4 @@ normalize.o : normalize.cpp
 
 clean:
 	rm *.o ../trans ../normalize
-	rm -rf ../Conv ../Trans ../Check
+	rm -rf ../Conv ../Trans ../Check ../Error

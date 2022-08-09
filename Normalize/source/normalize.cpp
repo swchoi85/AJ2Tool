@@ -11,6 +11,8 @@ int main(int argc,char* argv[])
 {
     J2CUtil j2c;
     std::string _dir("./Trans/");
+    bool loop = false;
+    if  ( argc > 1 ) loop = true;
     for (auto& p : filesystem::recursive_directory_iterator(_dir)) {
 	auto  path = p.path();
 
@@ -28,29 +30,41 @@ int main(int argc,char* argv[])
         Point Rad;
 
         cv::Mat norImage = j2c.normalize(image,P,Rad);
+//	printf("Pupil Center %d,%d\n",P.x,P.y);
+//	printf("Rad %d,%d\n",Rad.x,Rad.y);
 
         imshow("InitImage", image);
-        imshow("NormalizedImg", norImage);
 
-        cvtColor(image,image,cv::COLOR_GRAY2RGB);
-	if ( Rad.x )
-        cv::circle(image,P,Rad.x,CV_RGB(200,0,0),2,8,0);
-	if ( Rad.y )
-        cv::circle(image,P,Rad.y,CV_RGB(200,200,0),2,8,0);
+	if ( !norImage.empty() && Rad.x && Rad.y ) {
+            cvtColor(image,image,cv::COLOR_GRAY2RGB);
+            cv::circle(image,P,Rad.x,CV_RGB(200,0,0),2,8,0);
+            cv::circle(image,P,Rad.y,CV_RGB(200,200,0),2,8,0);
+        j2c.makeFile(p,"Check","iris",image);
+
+            imshow("NormalizedImg", norImage);
+	    j2c.makeFile(p,"Conv","normal",norImage);
+        }
+        else {
+            Mat dummy = Mat(Size(600,300),CV_8UC1,10);
+            j2c.makeFile(p,"Error","iris",image);
+            imshow("NormalizedImg", dummy);
+        }
+
         imshow("Pupil", image);
 
-        if (! norImage.empty() )  {
-	     j2c.makeFile(p,"Check","iris",image);
+        char key;
+        if ( loop == false ) {
+            key = waitKey(0);
+            if ( key == 'q' || key ==27 ) break;
+            if ( key == 'c' ) loop = true;
         }
-        if (! norImage.empty() )  {
-	     j2c.makeFile(p,"Conv","normal",norImage);
+	else { 
+            key = waitKey(1);
+            if ( key == 's' ) loop = false;
         }
-	if ( argc< 2 )
-            waitKey(0);
-	else waitKey(10);
 
     }
-    if ( argc> 0 )
-            waitKey(1000);
+    waitKey(1000);
+    destroyAllWindows();
     return 0;
 }
