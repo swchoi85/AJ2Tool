@@ -9,7 +9,7 @@ Sample App to use Mizar
 
 Install required tools
 
-### Raspiberrypi 4
+### Raspiberrypi 4 (OS: bullseye 64bit)
 
 Due to conflic between Opencv and Qt you shold install *opencv-python-headless* 
 
@@ -48,7 +48,7 @@ cp Lib/aj2lib.so.arm64_py3.6 aj2lib.so
 ```
 
 
-### UBUNTU x86
+### UBUNTU x86 (UBUNTU 20.04)
 
 ```
 
