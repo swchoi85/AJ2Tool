@@ -34,9 +34,7 @@ cp Lib/aj2lib.so.arm64_py3.9 aj2lib.so
 
 ```
 
-sudo apt install python3-pyqt5
-
-sudo apt install libopencv-dev
+pip3 install PyQt5
 
 pip3 install opencv-python-headless
 
