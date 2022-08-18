@@ -58,8 +58,8 @@ python3 main.py
 
 To capture Iris image, Click Start and then click capture
 
-To identify Iris and pupil press Identify button
+To identify Iris and pupil, press Identify button
 
-*Will be added Enroll and real Identify features.*
+*To be added Enroll and real Identify features.*
 
 <img src="https://user-images.githubusercontent.com/75821638/185295669-4edfbeda-dfb6-450f-834e-d94432d20762.jpg" width="600" height="350">
