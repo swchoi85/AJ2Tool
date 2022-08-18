@@ -34,9 +34,7 @@ cp Lib/aj2lib.so.arm64_py3.9 aj2lib.so
 
 ```
 
-sudo apt install python3-pyqt5
-
-sudo apt install libopencv-dev
+pip3 install PyQt5
 
 pip3 install opencv-python-headless
 
@@ -56,13 +54,12 @@ Run PKG
 
 python3 main.py
 
-
 ```
 
 To capture Iris image, Click Start and then click capture
 
-To identify Iris and pupil press Identify button
+To identify Iris and pupil, press Identify button
 
-Will be added Enroll and real Identify features.
+*To be added Enroll and real Identify features.*
 
 <img src="https://user-images.githubusercontent.com/75821638/185295669-4edfbeda-dfb6-450f-834e-d94432d20762.jpg" width="600" height="350">
