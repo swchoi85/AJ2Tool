@@ -48,6 +48,24 @@ cp Lib/aj2lib.so.arm64_py3.6 aj2lib.so
 ```
 
 
+### UBUNTU x86
+
+```
+
+pip3 install PyQt5
+
+pip3 install opencv-python-headless
+
+git clone https://github.com/swchoi85/AJ2Tool.git
+
+cd AJ2Tool/alkaidApp
+
+cp Lib/aj2lib.so.x86 aj2lib.so
+
+
+```
+
+
 Run PKG
 
 ```
