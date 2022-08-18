@@ -34,10 +34,6 @@ cp Lib/aj2lib.so.arm64_py3.9 aj2lib.so
 
 ```
 
-pip3 install PyQt5
-
-pip3 install opencv-python-headless
-
 git clone https://github.com/swchoi85/AJ2Tool.git
 
 cd AJ2Tool/alkaidApp
